@@ -26,16 +26,6 @@
                     </div>
                 </div>
                 <div class="columns">
-                    <div class="password_label input_group">
-                        <label for="password">Password:</label>
-                        <input type="password" name="password" id="password" placeholder="Enter your passaword">
-                    </div>
-                    <div class="reenter_password_label input_group">
-                        <label for="reenter_password">Confirm your password:</label>
-                        <input type="password" name="reenter_password" id="reenter_password" placeholder="Re-enter your password">
-                    </div>
-                </div>
-                <div class="columns">
                     <div class="email_label input_group">
                         <label for="email">Email:</label>
                         <input type="email" name="email" id="email" placeholder="example@email.com">
@@ -43,6 +33,16 @@
                     <div class="phone_label input_group">
                         <label for="phone">Phone:</label>
                         <input type="tel" id="phone" name="phone" placeholder="Insira seu telefone"/>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="password_label input_group">
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id="password" placeholder="Enter your passaword">
+                    </div>
+                    <div class="reenter_password_label input_group">
+                        <label for="reenter_password">Confirm your password:</label>
+                        <input type="password" name="reenter_password" id="reenter_password" placeholder="Re-enter your password">
                     </div>
                 </div>
                 <div class="columns infos">
@@ -65,10 +65,11 @@
                 </div>
                 
                 <div class="button_label input_group">
-                    <button type="button">Send</button>
+                    <button type="button" onclick="validate()">Send</button>
                 </div>
             </form>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
