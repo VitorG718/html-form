@@ -109,3 +109,12 @@ button {
     margin-top: 1rem;
     margin-right: 3rem;
 }
+
+.nav_bar {
+    display: flex;
+    color: red;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
