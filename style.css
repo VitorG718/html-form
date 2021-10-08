@@ -21,8 +21,7 @@ body {
 }
 .content {
     background-color: #333333;
-    width: 50%;
-    max-width: 40rem;
+    width: 40rem;
     height: auto;
     color: white;
     font-family: 'Poppins', sans-serif;
