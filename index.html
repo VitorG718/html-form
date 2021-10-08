@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Learning Forms</title>
+</head>
+<body>
+    <div class="nav_bar"></div>
+    <div class="main">
+        <div class="content">
+            <h1>SIGN UP</h1>
+            <form action="" method="POST" name="main_form">
+                <div class="columns">
+                    <div class="name_label input_group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your first name">
+                    </div>
+                    <div class="surname_label input_group">
+                        <label for="surname">Surname</label>
+                        <input type="text" id="surname" name="surname" placeholder="Enter your surname">
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="password_label input_group">
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id="password" placeholder="Enter your passaword">
+                    </div>
+                    <div class="reenter_password_label input_group">
+                        <label for="reenter_password">Confirm your password:</label>
+                        <input type="password" name="reenter_password" id="reenter_password" placeholder="Re-enter your password">
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="email_label input_group">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="example@email.com">
+                    </div>
+                    <div class="phone_label input_group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Insira seu telefone"/>
+                    </div>
+                </div>
+                <div class="columns infos">
+                    <div class="gender_label input_group">
+                        <label for="gender">Gender:</label>
+                        <select name="gender" id="gender">
+                            <option value="" disabled selected>Select one</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="empty">Don't inform</option>
+                        </select>
+                    </div>
+                    <div class="input_group news">
+                        <label for="newsletter">Newsletter</label>
+                        <div class="newsletter_label">
+                            <input type="checkbox" id="newsletter" name="newsletter"/>
+                            <small>I would like to receive news</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="button_label input_group">
+                    <button type="button">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
