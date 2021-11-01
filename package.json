@@ -1,0 +1,27 @@
+{
+  "name": "html-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitorG718/html-form.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VitorG718/html-form/issues"
+  },
+  "homepage": "https://github.com/VitorG718/html-form#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "formidable": "^2.0.1",
+    "http": "0.0.1-security"
+  }
+}
