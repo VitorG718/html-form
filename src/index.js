@@ -1,5 +1,6 @@
 const express = require('express')
-const Person = require('./person.entity')
+const Person = require('./models/person')
+const databaseConnection = require('./database/database')
 
 const app = express()
 
@@ -18,7 +19,13 @@ app.get('/form', (req, res) => {
     res.sendFile(__dirname + '/pages/form.html')
 })
 
-app.post('/profile', (req, res) => {
+app.get('/profile', (req, res) => {
+    databaseConnection.connect()
+    databaseConnection.query('SELECT * FROM person', (error, results, fields) => {
+        if (error) console.error('Error on quering process');
+        console.log('Person: ', new Person(results[0]))
+    })
+    databaseConnection.end()
     res.send('profile page')
 })
 
