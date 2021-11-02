@@ -1,60 +1,27 @@
-const http = require('http')
-const formidable = require('formidable')
-const fs = require('fs')
+const express = require('express')
+const Person = require('./person.entity')
 
-class Person {
+const app = express()
 
-    constructor(jsonData) {
-        this.name = jsonData.name
-        this.surname = jsonData.surname
-        this.email = jsonData.email
-        this.phone = jsonData.phone
-        this.password = jsonData.password
-        this.gender = jsonData.gender
-        this.newsletter = (jsonData.newsletter == 'on' ? true:false)
-    }
-}
+app.use(express.static(__dirname + '/public/'))
+app.listen(3000, () => console.log('Server is running....'))
 
-http.createServer((request, response) => {
-    switch (request.url) {
-        case '/':
-            fs.readFile(__dirname + '/pages/index.html', (error, data) => {
-                if (error) {
-                    console.log('Error', error.message)
-                } else {
-                    response.writeHead(200, {'Content-Type': 'text/html'})
-                    response.write(data)
-                }
-                response.end()
-            })
-            break
-        case '/form':
-            fs.readFile(__dirname + '/pages/index.html', (error, data) => {
-                if (error) {
-                    console.log('Error', error.message)
-                } else {
-                    response.writeHead(200, {'Content-Type': 'text/html'})
-                    response.write(data)
-                }
-                response.end()
-            })
-            break
-        case '/signedup':
-            let form = new formidable.IncomingForm()
-            form.parse(request, (error, fields, files) => {
-                if (error) {
-                    console.log('Error: ', error.message)
-                } else {
-                    response.writeHead(200, {'Content-Type': 'application/json'})
-                    let person = new Person(fields)
-                    response.write(JSON.stringify({ person }, null, 2));
-                }
-                response.end()
-            })
-            break
-        default:
-            response.writeHead(200, {'Content-Type': 'text/html'})
-            response.write('Page not found')
-            response.end()
-    }
-}).listen(80)
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/pages/login.html')
+})
+
+app.get('/login', (req, res) => {
+    res.sendFile(__dirname + '/pages/login.html')
+})
+
+app.get('/form', (req, res) => {
+    res.sendFile(__dirname + '/pages/form.html')
+})
+
+app.post('/profile', (req, res) => {
+    res.send('profile page')
+})
+
+app.get('/page-not-found', (req, res) => {
+    res.send('page not found')
+})

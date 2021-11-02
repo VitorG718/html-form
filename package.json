@@ -18,11 +18,10 @@
   },
   "homepage": "https://github.com/VitorG718/html-form#readme",
   "devDependencies": {
+    "@types/express": "^4.17.13",
     "nodemon": "^2.0.14"
   },
   "dependencies": {
-    "formidable": "^2.0.1",
-    "fs": "0.0.1-security",
-    "http": "0.0.1-security"
+    "express": "^4.17.1"
   }
 }
