@@ -1,4 +1,5 @@
 function validate() {
+    let form = document.getElementById('main_form')
     let errorMessage = document.getElementById('error_message')
     let name = document.getElementById('name')
     let surname = document.getElementById('surname')
@@ -70,5 +71,6 @@ function validate() {
     } else {
         errorMessage.innerHTML = "Signed up!"
         errorMessage.style = 'color: green;'
+        form.submit()
     }
 }

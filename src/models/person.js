@@ -8,6 +8,31 @@ class Person {
         this.gender = data.gender
         this.newsletter = (data.newsletter == 'on' || data.newsletter == 1 ? true:false)
     }
+
+    convertForDatabase() {
+        return {
+            name: this.name,
+            surname: this.surname,
+            email: this.email,
+            phone: this.phone,
+            password: this.password,
+            gender: this.gender,
+            newsletter: (this.newsletter ? 1:0)
+        }
+    }
+
+    convertToArray() {
+        let person = this.convertForDatabase()
+        return [
+            person.name,
+            person.surname,
+            person.email,
+            person.phone,
+            person.password,
+            person.gender,
+            person.newsletter
+        ]
+    }
 }
 
 module.exports = Person
