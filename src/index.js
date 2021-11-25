@@ -32,7 +32,7 @@ app.post('/signedup', (req, res) => {
         })
         databaseConnection.end()
     })
-    res.sendFile(__dirname + '/pages/signedup.html')
+    res.redirect('/login')
 })
 
 app.get('/profile', (req, res) => {
